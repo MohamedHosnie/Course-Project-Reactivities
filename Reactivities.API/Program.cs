@@ -18,15 +18,14 @@ namespace Reactivities.API
 		{
 			var host = CreateHostBuilder(args).Build();
 
-			using var scope = host.Services.CreateScope();
-
-			await UseServicesAsync(scope);
+			await UseServicesAsync(host);
 
 			await host.RunAsync();
 		}
 
-		private static async Task UseServicesAsync(IServiceScope scope)
+		private static async Task UseServicesAsync(IHost host)
 		{
+			using var scope = host.Services.CreateScope();
 			var services = scope.ServiceProvider;
 			
 			try {
