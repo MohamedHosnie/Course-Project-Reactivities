@@ -14,24 +14,25 @@ namespace Reactivities.API
 {
 	public class Program
 	{
-		public static void Main(string[] args)
+		public static async Task Main(string[] args)
 		{
 			var host = CreateHostBuilder(args).Build();
 
 			using var scope = host.Services.CreateScope();
 
-			UseServices(scope);
+			await UseServicesAsync(scope);
 
-			host.Run();
+			await host.RunAsync();
 		}
 
-		private static void UseServices(IServiceScope scope)
+		private static async Task UseServicesAsync(IServiceScope scope)
 		{
 			var services = scope.ServiceProvider;
 			
 			try {
 				var context = services.GetRequiredService<DataContext>();
-				context.Database.Migrate();
+				await context.Database.MigrateAsync();
+				await Seed.SeedData(context);
 
 			} catch(Exception e) {
 				var logger = services.GetRequiredService<ILogger<Program>>();
