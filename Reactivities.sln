@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reactivities.Domain", "Reac
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reactivities.Persistence", "Reactivities.Persistence\Reactivities.Persistence.csproj", "{DAFD76AD-2324-4202-BD59-EB0929692A42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reactivities.ReactUI", "Reactivities.ReactUI\Reactivities.ReactUI.csproj", "{02DDB23E-C54B-419B-8C67-67387631A6BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reactivities.ReactUI", "Reactivities.ReactUI\Reactivities.ReactUI.csproj", "{02DDB23E-C54B-419B-8C67-67387631A6BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,9 +36,7 @@ Global
 		{DAFD76AD-2324-4202-BD59-EB0929692A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAFD76AD-2324-4202-BD59-EB0929692A42}.Release|Any CPU.Build.0 = Release|Any CPU
 		{02DDB23E-C54B-419B-8C67-67387631A6BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{02DDB23E-C54B-419B-8C67-67387631A6BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02DDB23E-C54B-419B-8C67-67387631A6BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{02DDB23E-C54B-419B-8C67-67387631A6BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
